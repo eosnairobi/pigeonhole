@@ -10,6 +10,4 @@ from django.utils import timezone
 # Custom User Model
 class User(AbstractUser):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
     joined = models.DateTimeField(default=timezone.now)
